@@ -12,3 +12,32 @@ val list_1     = number_in_month([(2014,1,2)], 1) = 1
 val list_2     = number_in_month([(2014,1,2), (2014,2,1)], 1) = 1
 val list_3     = number_in_month([(2014,10,2), (2014,2,1)], 1) = 0
 val list_4     = number_in_month([(2014,10,2), (2014,10,1)], 10) = 2
+
+val empty_lists_1 = number_in_months([],[2,3,4]) = 0
+val empty_lists_2 = number_in_months([(2012,2,28)],[]) = 0
+val empty_lists_3 = number_in_months([],[]) = 0
+val list_1s       = number_in_months([(2012,2,28),(2013,12,1),(2011,10,31),(2011,11,28)],[2,3,4]) = 1
+val list_2s       = number_in_months([(2012,2,28),(2013,12,1),(2011,12,31),(2011,4,28)],[2,3,4]) = 2
+val list_3s       = number_in_months([(2012,2,28),(2013,12,1),(2011,3,31),(2011,4,28)],[2,3,4]) = 3
+val list_4s       = number_in_months([(2012,12,28),(2013,12,1),(2011,12,31),(2011,12,28)],[2,3,4]) = 0
+
+val empty_dates_in_month  = dates_in_month([],2) = []
+val zero_dates_in_month   = dates_in_month([(2012,3,12), (2012,3,4)],2) = []
+val one_dates_in_month    = dates_in_month([(2012,2,12), (2012,3,4)],2) = [(2012,2,12)]
+val two_dates_in_month    = dates_in_month([(2012,2,12), (2012,2,4)],2) = [(2012,2,12), (2012,2,4)]
+
+val empty_dates_in_months_1 = dates_in_months([],[2,3,4]) = []
+val empty_dates_in_months_2 = dates_in_months([(2013,2,3)],[]) = []
+val empty_dates_in_months_3 = dates_in_months([],[]) = []
+val zero_dates_in_months    = dates_in_months([(2012,5,12), (2012,5,4)],[2,3,4]) = []
+val one_dates_in_months     = dates_in_months([(2012,2,12), (2012,5,4)],[2,3,4]) = [(2012,2,12)]
+val two_dates_in_months     = dates_in_months([(2012,2,12), (2012,4,4)],[2,3,4]) = [(2012,2,12), (2012,2,4)]
+
+val get_empty = get_nth([], 2) = ""
+val get_hi    = get_nth(["hi", "there", "how", "are", "you"], 1) = "hi"
+val get_there = get_nth(["hi", "there", "how", "are", "you"], 2) = "there"
+val get_you   = get_nth(["hi", "there", "how", "are", "you"], 5) = "you"
+
+val may      = date_to_string((2013, 5, 18))  = "May 18, 2013"
+val june     = date_to_string((2013, 6, 1))   = "June 1, 2013"
+val december = date_to_string((2013, 12, 10)) = "December 10, 2013"
