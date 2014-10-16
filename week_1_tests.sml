@@ -48,3 +48,13 @@ val returns_two   = number_before_reaching_sum(5, [1,2,3,4,5])  = 2
 val returns_three = number_before_reaching_sum(10, [1,2,3,4,5]) = 3
 val returns_four  = number_before_reaching_sum(11, [1,2,3,4,5]) = 4
 val returns_five  = number_before_reaching_sum(16, [1,2,3,4,5]) = 5
+
+val month_3  = what_month(70)  = 3
+val month_10 = what_month(289) = 10
+val month_12 = what_month(360) = 12
+
+val test10       = month_range(31, 34) = [1,2,2,2]
+val test10_empty = month_range(34, 31) = []
+
+val test11       = oldest([(2012,2,28),(2011,3,31),(2011,4,28)]) = SOME (2011,3,31)
+val test11_empty = oldest([]) = NONE
