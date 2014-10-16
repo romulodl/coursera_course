@@ -41,3 +41,10 @@ val get_you   = get_nth(["hi", "there", "how", "are", "you"], 5) = "you"
 val may      = date_to_string((2013, 5, 18))  = "May 18, 2013"
 val june     = date_to_string((2013, 6, 1))   = "June 1, 2013"
 val december = date_to_string((2013, 12, 10)) = "December 10, 2013"
+
+val returns_zero  = number_before_reaching_sum(10, [])          = 0
+val returns_one   = number_before_reaching_sum(2, [1,2,3,4,5])  = 1
+val returns_two   = number_before_reaching_sum(5, [1,2,3,4,5])  = 2
+val returns_three = number_before_reaching_sum(10, [1,2,3,4,5]) = 3
+val returns_four  = number_before_reaching_sum(11, [1,2,3,4,5]) = 4
+val returns_five  = number_before_reaching_sum(16, [1,2,3,4,5]) = 5
